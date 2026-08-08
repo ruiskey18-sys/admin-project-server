@@ -1,0 +1,129 @@
+###################################
+# Maven
+###################################
+
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+pom.xml.*.versionsBackup
+release.properties
+
+
+###################################
+# IntelliJ IDEA
+###################################
+
+.idea/
+
+*.iml
+*.iws
+*.ipr
+
+out/
+
+
+###################################
+# Eclipse
+###################################
+
+.classpath
+.project
+.settings/
+
+
+###################################
+# VS Code
+###################################
+
+.vscode/
+
+
+###################################
+# NetBeans
+###################################
+
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+
+
+###################################
+# OS Files
+###################################
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+
+###################################
+# Logs
+###################################
+
+*.log
+logs/
+
+
+###################################
+# Java compiled files
+###################################
+
+*.class
+
+
+###################################
+# Package files
+###################################
+
+*.jar
+*.war
+*.ear
+
+# 保留 Maven wrapper jar
+!maven-wrapper.jar
+
+
+###################################
+# Spring Boot
+###################################
+
+# application 配置文件中的敏感信息
+application-local.yml
+application-dev.yml
+application-test.yml
+
+# Spring Boot generated files
+spring.log
+
+
+###################################
+# Environment
+###################################
+
+.env
+.env.*
+
+###################################
+# Database
+###################################
+
+*.sql.bak
+
+
+###################################
+# Temporary files
+###################################
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
