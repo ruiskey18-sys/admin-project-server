@@ -1,7 +1,6 @@
 package com.ruiskey.admin_project_server.controller;
 
 import com.ruiskey.admin_project_server.common.Result;
-import com.ruiskey.admin_project_server.entity.User;
 import com.ruiskey.admin_project_server.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
