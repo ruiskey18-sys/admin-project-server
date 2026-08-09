@@ -7,6 +7,6 @@
 1. list
 2. create
 3. update
-delete
-detail
-page
+4. delete
+5. detail
+6. page
