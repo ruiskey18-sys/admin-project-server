@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class UserCreateDTO {
-    private String username;
+    private String userName;
     private String password;
-    private String nickname;
+    private String nickName;
 }

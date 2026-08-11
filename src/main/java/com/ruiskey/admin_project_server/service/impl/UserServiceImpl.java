@@ -19,8 +19,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         User user = new User();
         // 入参转entity
         user.setObjectId(IdGenerator.generateId());
-        user.setUsername(userCreateDTO.getUsername());
-        user.setNickname(userCreateDTO.getNickname());
+        user.setUsername(userCreateDTO.getUserName());
+        user.setNickname(userCreateDTO.getNickName());
         user.setPassword(userCreateDTO.getPassword());
         // 存储
         this.save(user);
@@ -30,7 +30,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public Object update(UserUpdateDTO userUpdateDTO) {
         this.update(null, new LambdaUpdateWrapper<User>().eq(User::getObjectId, userUpdateDTO.getObjectId())
-                .set(User::getUsername, userUpdateDTO.getUsername()));
+                .set(User::getUsername, userUpdateDTO.getUserName()).set(User::getNickname, userUpdateDTO.getNickName()));
         return null;
     }
 
@@ -40,6 +40,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         User user = this.getById(objectId);
         userDetailVO.setObjectId(user.getObjectId());
         userDetailVO.setUserName(user.getUsername());
+        userDetailVO.setNickName(user.getNickname());
         return userDetailVO;
     }
 

@@ -4,20 +4,12 @@
 
 完成：
 
-- 用户查询接口
-- axios封装
-
+- 用户的controller层create,update,delete,detail等接口编写并apifox测试完成
 
 问题：
-
-动态路由刷新丢失
-
+一些字段没有对齐，等待前端写完后对齐
 
 解决：
 
-通过localStorage保存token permission重新加载路由
-
-
 下一步：
 
-按钮权限
