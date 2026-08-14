@@ -2,6 +2,7 @@ package com.ruiskey.admin_project_server.controller;
 
 import com.ruiskey.admin_project_server.common.Result;
 import com.ruiskey.admin_project_server.dto.UserCreateDTO;
+import com.ruiskey.admin_project_server.dto.UserPageDTO;
 import com.ruiskey.admin_project_server.dto.UserUpdateDTO;
 import com.ruiskey.admin_project_server.service.UserService;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,12 @@ public class UserController {
     @GetMapping("/list")
     public Result list(){
         return Result.success(userService.list());
+    }
+
+
+    @PostMapping("/pageList")
+    public Result pageList(@RequestBody UserPageDTO userPageDTO){
+        return Result.success(userService.pageList(userPageDTO));
     }
 
     /**
