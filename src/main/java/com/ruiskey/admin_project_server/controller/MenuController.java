@@ -19,4 +19,9 @@ public class MenuController {
     public Result menu(){
         return Result.success(menuService.list());
     }
+
+    @GetMapping("listTree")
+    public Result listTree(){
+        return Result.success(menuService.listTree());
+    }
 }

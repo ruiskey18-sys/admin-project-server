@@ -7,7 +7,6 @@ import com.ruiskey.admin_project_server.dto.UserUpdateDTO;
 import com.ruiskey.admin_project_server.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/user")

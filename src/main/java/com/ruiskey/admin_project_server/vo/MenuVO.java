@@ -1,13 +1,12 @@
-package com.ruiskey.admin_project_server.entity;
+package com.ruiskey.admin_project_server.vo;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
-@TableName("sys_menu")
-public class Menu {
+public class MenuVO {
     private String objectId;
     private String parentId;
     private String name;
@@ -19,4 +18,5 @@ public class Menu {
     private Integer sort;
     private Integer status;
     private LocalDateTime createTime;
+    private List<MenuVO> children;
 }

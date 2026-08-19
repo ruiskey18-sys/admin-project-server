@@ -35,29 +35,20 @@ COMMENT='系统用户表';
 CREATE TABLE sys_menu
 (
     object_id VARCHAR(50) PRIMARY KEY  NOT NULL COMMENT '业务唯一ID',
-
     parent_id BIGINT DEFAULT 0 COMMENT '父菜单ID',
-
     name VARCHAR(50) NOT NULL COMMENT '路由名称',
-
     path VARCHAR(100) NOT NULL COMMENT '路由路径',
-
     component VARCHAR(100) COMMENT '组件名称',
-
     title VARCHAR(50) COMMENT '菜单标题',
-
     icon VARCHAR(50) COMMENT '图标',
-
     type VARCHAR(20) DEFAULT 'MENU' COMMENT '类型',
-
     sort INT DEFAULT 0 COMMENT '排序',
-
     status TINYINT DEFAULT 1 COMMENT '状态',
-
     create_time DATETIME DEFAULT CURRENT_TIMESTAMP
-
 )
 COMMENT='系统菜单表';
+
+ALTER TABLE sys_menu MODIFY COLUMN parent_id VARCHAR(50);
 
 
 INSERT INTO sys_menu
