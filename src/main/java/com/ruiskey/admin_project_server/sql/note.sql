@@ -97,3 +97,12 @@ VALUES
 'project',
 2
 );
+
+
+CREATE TABLE blog
+(
+    id VARCHAR(50) PRIMARY KEY  NOT NULL COMMENT '业务唯一ID',
+    name VARCHAR(50) NOT NULL COMMENT '路由名称',
+    title VARCHAR(50) COMMENT '菜单标题'
+)
+COMMENT='博客表';
