@@ -1,5 +1,6 @@
 server:
   port: 8080
+  address: 127.0.0.1
 
 spring:
   application:
@@ -10,6 +11,15 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
+
+  ai:
+    mcp:
+      server:
+        enabled: true
+        name: admin-mcp-server
+        version: 1.0.0
+        type: SYNC
+        protocol: STREAMABLE
 
 mybatis-plus:
   configuration:
