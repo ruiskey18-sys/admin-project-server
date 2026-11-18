@@ -42,6 +42,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public UserDetailVO detail(String objectId) {
         UserDetailVO userDetailVO = new UserDetailVO();
         User user = this.getById(objectId);
+        if (user == null) {
+            return null;
+        }
         userDetailVO.setObjectId(user.getObjectId());
         userDetailVO.setUserName(user.getUsername());
         userDetailVO.setNickName(user.getNickname());

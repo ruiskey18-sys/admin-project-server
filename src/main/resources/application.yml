@@ -13,13 +13,33 @@ spring:
     password: 123456
 
   ai:
+    ollama:
+      base-url: ${OLLAMA_BASE_URL:http://localhost:11434}
+      chat:
+        options:
+          model: ${OLLAMA_MODEL:qwen3:4b}
+          temperature: 0.1
     mcp:
+      client:
+        name: admin-chat-client
+        type: SYNC
+        # 同一进程中不能在Web服务启动前连接自己；首次聊天时初始化。
+        initialized: false
+        toolcallback:
+          enabled: false
+        streamable-http:
+          connections:
+            local-admin:
+              url: http://127.0.0.1:${server.port}
+              endpoint: /mcp
       server:
         enabled: true
         name: admin-mcp-server
         version: 1.0.0
         type: SYNC
         protocol: STREAMABLE
+        # 仅通过@McpTool发布，避免把Client的远程工具重新导出到自身。
+        tool-callback-converter: false
 
 mybatis-plus:
   configuration:
